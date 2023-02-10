@@ -1,0 +1,29 @@
+Private Page
+-----------
+
+<?php
+global $wpdb;
+$table_name = $wpdb->prefix . "contact_form_submissions";
+$form_submissions = $wpdb->get_results("SELECT * FROM $table_name", ARRAY_A);
+
+if (!empty($form_submissions)) {
+    echo '<table>';
+    echo '<tr>';
+    echo '<th>Name</th>';
+    echo '<th>Email</th>';
+    echo '<th>Message</th>';
+    echo '</tr>';
+    
+    foreach ($form_submissions as $submission) {
+        echo '<tr>';
+        echo '<td>' . esc_html($submission['name']) . '</td>';
+        echo '<td>' . esc_html($submission['email']) . '</td>';
+        echo '<td>' . esc_html($submission['message']) . '</td>';
+        echo '</tr>';
+    }
+    
+    echo '</table>';
+} else {
+    echo '<p>No form submissions yet.</p>';
+}
+?>

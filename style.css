@@ -1,0 +1,40 @@
+/*
+Theme Name: Contact Us
+Author: Christine Bai
+Description: A simple WordPress theme with a contact form that stores data in the database and is displayed on a private page.
+Version: 1.0
+*/
+
+/* Custom Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #D9D9D9;
+  }
+/* Simple Contact Form Theme styles */
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #333;
+	background-color: #f9f9f9;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 30px;
+    display: flex;
+
+}
+
+header #header {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 30px 0;
+    display: flex;
+}
